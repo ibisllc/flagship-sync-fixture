@@ -1,15 +1,29 @@
 {
   "schema_version": 1,
   "name": "syncfixture",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A tiny static app the Flagship gym imports and syncs. Test input only.",
-  "runtime": { "base": "static", "port": 8080 },
-  "network": { "subdomain": "syncfixture" },
+  "runtime": {
+    "base": "static",
+    "port": 8080
+  },
+  "network": {
+    "subdomain": "syncfixture"
+  },
   "access": {
     "enabled": true,
-    "public_routes": ["/*"],
+    "public_routes": [
+      "/*",
+      "/about.html"
+    ],
     "default_role": "member",
-    "role_descriptions": { "member": "Uses the app.", "manager": "Same as member.", "master": "Same as member." }
+    "role_descriptions": {
+      "member": "Uses the app.",
+      "manager": "Same as member.",
+      "master": "Same as member."
+    }
   },
-  "migration": { "verification": "standard" }
+  "migration": {
+    "verification": "standard"
+  }
 }
